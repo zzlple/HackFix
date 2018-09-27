@@ -105,10 +105,26 @@ public class metaioDeviceCamera : MonoBehaviour
 
         if (textureCreated)
         {
+
             HackFixCamera();
+
             updateCameraPlaneScale();
+
+
+
         }
     }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if(focus){
+
+            HackFixCamera();
+        }
+    }
+
+
+
 
     /// <summary>
     /// Applys screen orientation to camera preview plane
